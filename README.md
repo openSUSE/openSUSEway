@@ -10,12 +10,17 @@ sudo zypper in alacritty grim slurp fontawesome-fonts fontawesome-fonts-web sway
 
 `wofi` is an other application launcher option, if that isn't in Factory or repos, it is in the development project [X11:Wayland wofi](https://build.opensuse.org/package/show/X11:Wayland/wofi):
 ```
-zypper in wofi
+sudo zypper in wofi
 ```
 
 Recommended packages for openSUSE way:
 ```
-zypper in gdm gdm-systemd sway gfxboot gfxboot-branding-openSUSE git jq libQt5WaylandClient5 libQt5WaylandCompositor5 setxkbmap command-not-found screen
+sudo zypper in gdm gdm-systemd sway gfxboot gfxboot-branding-openSUSE git jq libQt5WaylandClient5 libQt5WaylandCompositor5 setxkbmap command-not-found screen
 ```
 
 [Sway openSUSE wiki page](https://en.opensuse.org/Sway) for more details.
+
+
+Another dotfiles examples:
+* https://github.com/jjquin/swayarch
+* https://github.com/jjquin/dotfiles
