@@ -1,4 +1,4 @@
-# openSUSEway
+# openSUSE way
 dotfiles for Sway on openSUSE
 
 Please check [Manage-dotfiles-with-Git](https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/) on how to use dotfiles.
