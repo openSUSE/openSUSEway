@@ -1,0 +1,5 @@
+default_border pixel 2
+gaps inner 10
+client.focused #6da741 #173f4f #73ba25
+client.unfocused #00a489 #173f4f #35b9ab
+client.focused_inactive #6da741 #00a489 #173f4f
