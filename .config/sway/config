@@ -254,5 +254,5 @@ bar {
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*
 exec "systemctl --user import-environment; systemctl --user start sway-session.target"
-#exec waybar
+exec waybar
 exec mako
