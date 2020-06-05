@@ -1,5 +1,48 @@
+#### Default openSUSE config for sway
+# Copy this to ~/.config/sway/config.d/
+# or leave `include /etc/sway/config.d/*`
+# in your local config file
+
+# wofi as application launcher
+set $menu wofi --show drun,run
+
+# openSUSE wallpaper
+output * bg /usr/share/wallpapers/default-1920x1080.jpg fill
+
+# Idle configuration
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+bindsym --to-code {
+    $mod+b splith
+    $mod+v splitv
+}
+
+# Media keys
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+
+#
+# Status Bar:
+#
+bar {
+    swaybar_command waybar
+}
+
+# openSUSE theme
 default_border pixel 2
 gaps inner 10
 client.focused #6da741 #173f4f #73ba25
 client.unfocused #00a489 #173f4f #35b9ab
 client.focused_inactive #6da741 #00a489 #173f4f
+
+exec "systemctl --user import-environment; systemctl --user start sway-session.target"
+exec waybar
+exec mako

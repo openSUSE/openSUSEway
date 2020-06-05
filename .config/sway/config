@@ -18,21 +18,17 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-#set $menu dmenu_path | dmenu -nb '#173f4f' -sb '#35b9ab' -nf '#73ba25' -sf '#173f4f' -fn 'Source Sans Pro-14' | xargs swaymsg exec --
-set $menu alacritty --class 'launcher' --command bash -c 'compgen -c | sort -u | fzf --no-info --color="bg:#173f4f,fg:#35b9ab,bg+:#68cbc0,fg+:#516f7b,pointer:#173f4f,hl+:#173f4f,hl:#73ba25" | xargs -r swaymsg -t command exec'
-for_window [app_id="^launcher$"] floating enable, border none, resize set width 400 px height 100 px, move position center
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# it is set in config.d/openSUSE
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/default-1920x1080.jpg fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
-output HDMI-A-1 resolution 1920x1080 position 0,0
-output DP-3 resolution 1920x1080 position 0,0
-output eDP-1 resolution 1920x1080 position 1920,0
-output DP-4 resolution 1920x1080 position 3840,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -40,11 +36,11 @@ output DP-4 resolution 1920x1080 position 3840,0
 #
 # Example configuration:
 #
-exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' \
-              resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' \
+#               resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -63,17 +59,6 @@ exec swayidle -w \
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-
-input type:keyboard { 
-    xkb_layout us,ru
-    xkb_variant nodeadkeys
-    xkb_options grp:alt_shift_toggle
-}
-
-bindsym --to-code {
-    $mod+b splith
-    $mod+v splitv
-}
 
 ### Key bindings
 #
@@ -151,10 +136,6 @@ bindsym --to-code {
     bindsym $mod+Shift+0 move container to workspace 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-
-# Workspace to Secreen
-    bindsym $mod+Ctrl+Left move workspace to output right
-    bindsym $mod+Ctrl+Right move workspace to output left
 #
 # Layout stuff:
 #
@@ -217,42 +198,4 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Media keys
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-
-# Screenshot everything, focused workspace and selected region
-bindsym Print exec grim
-bindsym $mod+Print exec grim -o "$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')"
-bindsym Shift+Print exec grim -g "$(slurp)"
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
-bar {
-    swaybar_command waybar
-}
-
 include /etc/sway/config.d/*
-include ~/.config/sway/config.d/*
-exec "systemctl --user import-environment; systemctl --user start sway-session.target"
-exec waybar
-exec mako
