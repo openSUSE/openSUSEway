@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "tray"],
     "modules-center": ["sway/window"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock#date", "clock", "clock#msk", "clock#prv"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock#date", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -63,14 +63,6 @@
     "clock#date": {
         "format": "{:%a %d %b w:%V}",
         "tooltip": false
-    },
-    "clock#prv": {
-        "timezone": "America/Denver",
-        "format": "{:%H:%Mp}"
-    },
-    "clock#msk": {
-        "timezone": "Europe/Moscow",
-        "format": "{:%H:%Mm}"
     },
     "cpu": {
         "format": "{usage}% ",
