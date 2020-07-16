@@ -5,16 +5,18 @@ Please check [Manage-dotfiles-with-Git](https://news.opensuse.org/2020/03/27/Man
 
 For this config please install these packages:
 ```
-sudo zypper in patterns-sway-sway fontawesome-fonts fontawesome-fonts-web pavucontrol brightnessctl pulseaudio pulseaudio-utils jq
+sudo zypper in openSUSEway
 ```
 
-`wofi` is an other application launcher option, if that isn't in Factory or repos, it is in the development project [X11:Wayland wofi](https://build.opensuse.org/package/show/X11:Wayland/wofi):
+Add this to your ~/.profile:
 ```
-sudo zypper in wofi
+set -a
+. /etc/sway/env
+set +a
 ```
+that will import some recomended (optional) variables from `/etc/sway/env`
 
 [Sway openSUSE wiki page](https://en.opensuse.org/Sway) for more details.
-
 
 Another dotfiles examples:
 * https://github.com/jjquin/swayarch
