@@ -1,3 +1,7 @@
+# recomended enviroment variables for sway based desktop
+# openSUSEway installs/imports this to/from:
+# /usr/lib/environment.d/50-openSUSE.conf
+# /etc/profile.d/openSUSEway.sh
 MOZ_ENABLE_WAYLAND=1
 QT_QPA_PLATFORM=wayland-egl
 CLUTTER_BACKEND=wayland
@@ -6,3 +10,8 @@ ELM_ENGINE=wayland_egl
 SDL_VIDEODRIVER=wayland
 _JAVA_AWT_WM_NONREPARENTING=1
 NO_AT_BRIDGE=1
+
+# these vars enforce qt theme for openSUSEway
+# needs qt5ct and adwaita-qt5 packages
+QT_STYLE_OVERRIDE=adwaita-dark
+QT_QPA_PLATFORMTHEME=qt5ct
