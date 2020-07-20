@@ -8,13 +8,7 @@ For this config please install these packages:
 sudo zypper in openSUSEway
 ```
 
-Add this to your ~/.profile:
-```
-set -a
-. /etc/sway/env
-set +a
-```
-that will import some recomended (optional) variables from `/etc/sway/env`
+openSUSEway imports some recomended (optional) variables from `/etc/sway/env`, that is done by `/etc/profile.d/openSUSEway.sh` for text mode and by `/usr/lib/environment.d/50-openSUSE.conf` for systemd graphic environments.
 
 [Sway openSUSE wiki page](https://en.opensuse.org/Sway) for more details.
 
