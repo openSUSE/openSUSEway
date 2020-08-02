@@ -10,7 +10,9 @@ sudo zypper in openSUSEway
 
 openSUSEway imports some recomended (optional) variables from `/etc/sway/env`, that is done by `/etc/profile.d/openSUSEway.sh` for text mode and by `/usr/lib/environment.d/50-openSUSE.conf` for systemd graphic environments.
 
-[Sway openSUSE wiki page](https://en.opensuse.org/Sway) for more details.
+[openSUSEway desktop enviroment](https://en.opensuse.org/Portal:OpenSUSEway) for more details on complete desktop enviroment for openSUSE.
+
+[Sway openSUSE wiki page](https://en.opensuse.org/Sway) for more details about Sway on openSUSE.
 
 Another dotfiles examples:
 * https://github.com/jjquin/swayarch
