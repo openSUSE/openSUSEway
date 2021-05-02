@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "tray"],
     "modules-center": ["sway/window"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock#date", "clock"],
+    "modules-right": ["custom/zypper", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock#date", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -28,6 +28,14 @@
     "custom/layout": {
         "tooltip": false,
         "exec": "swaymsg -mrt subscribe '[\"input\"]' | jq -r --unbuffered \"select(.change == \\\"xkb_layout\\\") | .input | select(.type == \\\"keyboard\\\") | .xkb_active_layout_name | .[0:2]\""
+    },
+    "custom/zypper": {
+        "format": "{} ",
+        "interval": 3600,
+        "exec": "zypper lu | grep 'v |' | wc -l; echo 'packages to update'",
+        "exec-if": "exit 0",
+        "on-click": "exec alacritty -e sudo  zypper dup ; pkill -SIGRTMIN+8 waybar",
+        "signal": 8
     },
     // Modules configuration
     //  "sway/workspaces": {
