@@ -34,7 +34,7 @@
         "interval": 3600,
         "exec": "zypper lu | grep 'v |' | wc -l; echo 'packages to update'",
         "exec-if": "exit 0",
-        "on-click": "exec alacritty -e sudo  zypper dup ; pkill -SIGRTMIN+8 waybar",
+        "on-click": "exec alacritty -e sudo sh -c 'zypper ref; zypper dup; pkill -SIGRTMIN+8 waybar'",
         "signal": 8
     },
     // Modules configuration
