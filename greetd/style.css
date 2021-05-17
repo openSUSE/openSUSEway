@@ -17,13 +17,3 @@ button {
 	background: rgba(23, 63, 79, 1);
 	border-color: rgba(33, 164, 223, 1);
 }
-button:first-child {
-	color: rgba(185, 220, 146, 1);
-	background: rgba(139, 159, 167, 1);
-	border-color: rgba(89, 187, 231, 1);
-}
-button:only-child {
-	color: rgba(115, 186, 37, 1);
-	background: rgba(23, 63, 79, 1);
-	border-color: rgba(33, 164, 223, 1);
-}
