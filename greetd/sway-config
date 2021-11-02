@@ -6,4 +6,6 @@ bindsym Mod4+shift+e exec swaynag \
 	-b 'Poweroff' 'systemctl poweroff' \
 	-b 'Reboot' 'systemctl reboot'
 
+exec /usr/libexec/polkit-gnome-authentication-agent-1
+
 #include /etc/sway/config.d/
