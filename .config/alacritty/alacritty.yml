@@ -1,1 +1,2 @@
-background_opacity: 0.4
+window:
+  opacity: 0.4
