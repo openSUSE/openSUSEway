@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     // "gtk-layer-shell": "false",
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "tray"],
+    "modules-left": ["sway/workspaces", "custom/scratchpad", "sway/mode", "tray"],
     "modules-center": ["sway/window"],
     "modules-right": ["custom/zypper", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock#date", "clock"],
     "sway/mode": {
@@ -133,5 +133,14 @@
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol",
         "tooltip": false
+    },
+    "custom/scratchpad": {
+        "format-text": "{}",
+        "return-type": "json",
+        "interval": 3,
+        "exec": "scratchpad-indicator.sh 2> /dev/null",
+        "exec-if": "exit 0",
+        "on-click": "swaymsg 'scratchpad show'",
+        "on-click-right": "swaymsg 'move scratchpad'"
     }
 }

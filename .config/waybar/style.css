@@ -22,6 +22,11 @@ window#waybar.solo {
     margin: 0 5px;
 }
 
+#custom-scratchpad {
+    margin: 0px	5px;
+    padding: 0px 5px;
+}
+
 #workspaces button {
     padding: 0 5px;
     color: rgba(53, 185, 171, 1);
