@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "tray"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/zypper", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock#date", "clock"],
+    "modules-right": ["custom/zypper", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -65,12 +65,16 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%H:%M}",
-        "tooltip": false
-    },
-    "clock#date": {
-        "format": "{:%a %d %b w:%V}",
-        "tooltip": false
+        // "timezone": "America/New_York",
+        "format": " {:%b %d %Y %R}",
+        "tooltip-format": "<span color='#35b9ab'><big>{:%Y %B}</big></span>\n<span color='#35b9ab'><tt><small>{calendar}</small></tt></span>",
+        "format-alt": "{:%a %d %b w:%V %H:%M}",
+        "today-format": "<span color='#21a4df'><b><u>{}</u></b></span>",
+        "calendar-weeks-pos": "left",
+        "format-calendar": "<span background='#173f4f' bgalpha='60%'><b>{}</b></span>",
+        "format-calendar-weeks": "<span color='#73ba25'><b>{}</b></span>",
+        "format-calendar-weekdays": "<span color='#21a4df'><b>{}</b></span>",
+        "interval": 10
     },
     "cpu": {
         "format": "{usage}% ",
