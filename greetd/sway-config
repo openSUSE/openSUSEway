@@ -1,3 +1,7 @@
+input "type:touchpad" {
+  tap enabled
+}
+
 exec "gtkgreet -l -s /etc/greetd/style.css; swaymsg exit"
 
 bindsym Mod4+shift+e exec swaynag \
