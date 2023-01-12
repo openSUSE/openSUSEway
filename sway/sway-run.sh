@@ -8,9 +8,8 @@ export XDG_CURRENT_DESKTOP=sway
 set -a
 # Import openSUSEway environment variables
 . /etc/sway/env
-# Import user environment variables
-. ~/.config/environment.d/*.conf
+# Import environment.d variables by calling the systemd generator
+eval "$(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)"
 set +a
 
 systemd-cat --identifier=sway sway $@
-
