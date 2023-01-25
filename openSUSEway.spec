@@ -58,6 +58,7 @@ Requires:       tar
 Suggests:       vifm
 Suggests:       vim
 Requires:       clipman
+Requires:       wl-clipboard
 Requires:       mpris-ctl
 Requires:       sway-marker
 Requires:       waybar-branding-openSUSE
