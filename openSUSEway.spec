@@ -103,8 +103,8 @@ Requires:       sway
 Requires:       wallpaper-branding-openSUSE
 Requires:       wob
 Provides:       sway-branding = %{version}
-Conflicts:      otherproviders(sway-branding)
-Supplements:    packageand(sway:branding-openSUSE)
+Conflicts:      sway-branding
+Supplements:    (sway and branding-openSUSE)
 
 #BRAND: /etc/sway/config and /etc/sway/config.d/
 #BRAND: contain openSUSE config and branding
@@ -117,8 +117,8 @@ Summary:        openSUSE branding of waybar
 Group:          System/GUI/Other
 BuildRequires:  waybar
 Provides:       waybar-branding = %{version}
-Conflicts:      otherproviders(waybar-branding)
-Supplements:    packageand(waybar:branding-openSUSE)
+Conflicts:      waybar-branding
+Supplements:    (waybar and branding-openSUSE)
 
 #BRAND: /etc/xdg/waybar/config and /etc/xdg/waybar/style.css
 #BRAND: contain openSUSE config and branding
