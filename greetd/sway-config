@@ -1,3 +1,5 @@
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 input "type:touchpad" {
   tap enabled
 }
