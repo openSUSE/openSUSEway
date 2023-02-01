@@ -190,14 +190,22 @@ cp %{_sysconfdir}/greetd/config.toml.way %{_sysconfdir}/greetd/config.toml
 test -e %{_sysconfdir}/greetd/config.toml.orig && \
     mv %{_sysconfdir}/greetd/config.toml.orig %{_sysconfdir}/greetd/config.toml || true
 
+%pre -n sway-branding-openSUSE
+%service_add_pre sway-session.target sway.service
+
 %post -n sway-branding-openSUSE
 test -e %{_datadir}/wayland-sessions/sway.desktop && \
     mv -n %{_datadir}/wayland-sessions/sway.desktop %{_datadir}/wayland-sessions/sway.desktop.orig || true
 cp %{_datadir}/wayland-sessions/sway.desktop.brand %{_datadir}/wayland-sessions/sway.desktop
+%service_add_post sway-session.target sway.service
+
+%preun -n sway-branding-openSUSE
+%service_del_preun sway-session.target sway.service
 
 %postun -n sway-branding-openSUSE
 test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
     mv %{_datadir}/wayland-sessions/sway.desktop.orig %{_datadir}/wayland-sessions/sway.desktop || true
+%service_del_postun sway-session.target sway.service
 
 %files
 %dir %{_sysconfdir}/xdg/qt5ct/
