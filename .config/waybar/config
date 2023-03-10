@@ -142,7 +142,7 @@
         "format-text": "{}",
         "return-type": "json",
         "interval": 3,
-        "exec": "scratchpad-indicator.sh 2> /dev/null",
+        "exec": "/usr/share/openSUSEway/helpers/scratchpad-indicator.sh 2> /dev/null",
         "exec-if": "exit 0",
         "on-click": "swaymsg 'scratchpad show'",
         "on-click-right": "swaymsg 'move scratchpad'"

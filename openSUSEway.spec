@@ -168,6 +168,7 @@ sed -i -e "s|wofi --show.*|wofi --conf=%{_sysconfdir}/wofi/config --style=%{_sys
 ## waybar
 install -D -p -m 644 .config/waybar/config %{buildroot}%{_sysconfdir}/xdg/waybar/config
 install -D -p -m 644 .config/waybar/style.css %{buildroot}%{_sysconfdir}/xdg/waybar/style.css
+install -D -p -m 755 .config/waybar/scratchpad-indicator.sh %{buildroot}%{_datadir}/openSUSEway/helpers/scratchpad-indicator.sh
 
 ## wob
 install -D -p -m 644 .config/wob/wob.ini %{buildroot}%{_sysconfdir}/sway/wob/wob.ini
@@ -214,6 +215,8 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 %attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/config.toml.way
 %attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/sway-config
 %attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/environments
+%dir %{_datadir}/openSUSEway/
+%dir %{_datadir}/openSUSEway/helpers/
 
 %files -n patterns-openSUSEway
 %dir %{_defaultdocdir}/patterns
@@ -248,5 +251,6 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 %dir %{_sysconfdir}/xdg/waybar
 %config(noreplace) %{_sysconfdir}/xdg/waybar/config
 %config(noreplace) %{_sysconfdir}/xdg/waybar/style.css
+%{_datadir}/openSUSEway/helpers/scratchpad-indicator.sh
 
 %changelog
