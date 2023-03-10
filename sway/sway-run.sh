@@ -12,4 +12,7 @@ set -a
 eval "$(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)"
 set +a
 
+# Start the Sway session
+systemctl --user start sway-session.target
+
 systemd-cat --identifier=sway sway $@
