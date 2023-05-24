@@ -20,7 +20,7 @@
 %define waybar_version %(rpm -q --queryformat "%%{version}" waybar)
 
 Name:           openSUSEway
-Version:        0.15
+Version:        0.15.2
 Release:        0
 Summary:        The openSUSEway desktop environment meta package
 License:        MIT
@@ -140,6 +140,7 @@ install -D -p -m 644 qt5ct.conf %{buildroot}%{_sysconfdir}/xdg/qt5ct/qt5ct.conf
 install -D -p -m 644 greetd/sway-config %{buildroot}%{_sysconfdir}/greetd/sway-config
 install -D -p -m 644 greetd/config.toml %{buildroot}%{_sysconfdir}/greetd/config.toml.way
 install -D -p -m 644 greetd/environments %{buildroot}%{_sysconfdir}/greetd/environments
+install -D -p -m 644 greetd/style.css %{buildroot}%{_sysconfdir}/greetd/style.css
 
 ## openSUSEway pattern package
 mkdir -p %{buildroot}/%{_defaultdocdir}/patterns/
@@ -215,6 +216,7 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 %attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/config.toml.way
 %attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/sway-config
 %attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/environments
+%attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/style.css
 %dir %{_datadir}/openSUSEway/
 %dir %{_datadir}/openSUSEway/helpers/
 
