@@ -23,4 +23,4 @@ fi
 # Start the Sway session
 systemctl --user start sway-session.target
 
-systemd-cat --identifier=sway sway $unsupported_gpu $@
+systemd-cat --identifier=sway /usr/bin/dbus-run-session sway $unsupported_gpu $@
