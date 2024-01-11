@@ -158,7 +158,7 @@ install -D -p -m 755 sway/sway-run.sh %{buildroot}%{_bindir}/sway-run.sh
 
 ### alacritty
 # so far doesn't have special branding package and it doesn't support system wide config
-install -D -p -m 644 .config/alacritty/alacritty.yml %{buildroot}%{_sysconfdir}/alacritty/alacritty.yml
+install -D -p -m 644 .config/alacritty/alacritty.toml %{buildroot}%{_sysconfdir}/alacritty/alacritty.toml
 
 ## wofi
 install -D -p -m 644 .config/wofi/config %{buildroot}%{_sysconfdir}/wofi/config
@@ -236,7 +236,7 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 %{_bindir}/sway-run.sh
 
 %dir %{_sysconfdir}/alacritty
-%config(noreplace) %{_sysconfdir}/alacritty/alacritty.yml
+%config(noreplace) %{_sysconfdir}/alacritty/alacritty.toml
 
 %dir %{_sysconfdir}/wofi
 %config(noreplace) %{_sysconfdir}/wofi/config
