@@ -43,6 +43,7 @@ Requires:       gfxboot-branding-openSUSE
 Requires:       git
 Requires:       greetd
 Requires:       grep
+Recommends:     grim
 Requires:       gzip
 Requires:       (gtkgreet or wlgreet)
 Suggests:       imv
@@ -60,6 +61,7 @@ Suggests:       vim
 Requires:       clipman
 Requires:       wl-clipboard
 Requires:       mpris-ctl
+Recommends:     slurp
 Requires:       sway-marker
 Requires:       waybar-branding-openSUSE
 Requires:       wget
