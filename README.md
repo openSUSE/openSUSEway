@@ -23,3 +23,8 @@ Please check [Manage-dotfiles-with-Git](https://news.opensuse.org/2020/03/27/Man
 ## Other dotfiles examples:
 * https://github.com/jjquin/swayarch
 * https://github.com/jjquin/dotfiles
+
+## Other openSUSE sway derivatives
+
+  - https://sr.ht/~mcepl/moldavite/
+  - https://github.com/ProjectGreybeard/Info
