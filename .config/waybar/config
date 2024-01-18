@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "custom/scratchpad", "sway/mode", "tray"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/zypper", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock", "custom/notification"],
+    "modules-right": ["custom/zypper", "network", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock", "custom/notification"],
     "sway/mode": {
         "format": " {}"
     },
@@ -130,6 +130,22 @@
         "format-linked": "",
         "format-disconnected": "⚠",
         "format-alt": "{ifname} {essid} ({signalStrength}%)"
+    },
+    "bluetooth": {
+	"format": "",
+	"format-disabled": "",
+	"format-off": "",
+	"format-connected": " {num_connections}",
+	// "format-connected": " {device_alias}",
+	"tooltip-format": "{controller_address} {status}\n\n{num_connections} connected",
+	"tooltip-format-disabled": "{status}",
+	"tooltip-format-connected": "{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+	"on-click": "bluetooth toggle; pkill -SIGRTMIN+8 waybar",
+	"on-click-right": "exec alacritty -e sh -c 'bluetoothctl'"
     },
     "pulseaudio": {
         "format": "{icon}",

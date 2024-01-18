@@ -35,6 +35,7 @@ BuildRequires:  pkgconfig(systemd)
 Requires:       NetworkManager
 Requires:       aaa_base
 Recommends:     adwaita-qt5
+Recommends:     bluez
 Requires:       bzip2
 Requires:       command-not-found
 Requires:       curl
@@ -56,6 +57,7 @@ Recommends:     qt5ct
 Requires:       sudo
 Requires:       sway-branding-openSUSE
 Requires:       tar
+Recommends:     tlp
 Suggests:       vifm
 Suggests:       vim
 Requires:       clipman

@@ -49,6 +49,7 @@ window#waybar.solo {
 #cpu, 
 #memory, 
 #network, 
+#bluetooth,
 #pulseaudio, 
 #idle_inhibitor, 
 #temperature,
@@ -74,3 +75,14 @@ window#waybar.solo {
     color: rgba(217, 216, 216, 1);
 }
 
+#bluetooth.disabled {
+    color: rgba(128, 128, 128, 1);
+}
+
+#bluetooth.off {
+    color: rgba(128, 128, 128, 1);
+}
+
+#bluetooth.connected {
+    color: rgba(115, 186, 37, 1);
+}
