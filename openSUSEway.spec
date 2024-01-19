@@ -30,7 +30,7 @@ Source0:        https://github.com/openSUSE/openSUSEway/archive/%{version}.tar.g
 
 BuildArch:      noarch
 BuildRequires:  aaa_base
-BuildRequires:  pkgconfig(systems)
+BuildRequires:  pkgconfig(systemd)
 
 # system
 Requires:       wget
