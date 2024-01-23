@@ -152,7 +152,7 @@ echo 'This file marks the pattern openSUSEway to be installed.' >%{buildroot}%{_
 install -D -p -m 644 .config/sway/config %{buildroot}%{_sysconfdir}/sway/config
 install -D -p -m 644 .config/sway/env %{buildroot}%{_sysconfdir}/sway/env
 install -D -p -m 644 .config/sway/config.d/50-openSUSE.conf %{buildroot}%{_sysconfdir}/sway/config.d/50-openSUSE.conf
-install -D -p -m 644 .config/sway/config.d/30-windows.conf %{buildroot}%{_sysconfdir}/sway/config.d/30-windows.conf
+install -D -p -m 644 .config/sway/config.d/55-openSUSE-windows.conf %{buildroot}%{_sysconfdir}/sway/config.d/55-openSUSE-windows.conf
 
 install -D -p -m 644 sway/sway-session.target %{buildroot}%{_prefix}/lib/systemd/user/sway-session.target
 install -D -p -m 644 sway/sway.service %{buildroot}%{_prefix}/lib/systemd/user/sway.service
@@ -185,7 +185,6 @@ install -D -p -m 644 .config/swaync/style.css %{buildroot}%{_sysconfdir}/sway/sw
 # bug #1176195, don't force enviroment, cleaning up old installations
 test -e %{_sysconfdir}/profile.d/openSUSEway.sh && rm %{_sysconfdir}/profile.d/openSUSEway.sh || true
 test -e %{_prefix}/lib/environment.d/50-openSUSEway.conf && rm %{_prefix}/lib/environment.d/50-openSUSEway.conf || true
-test -e %{_prefix}/lib/environment.d/30-windows.conf && rm %{_prefix}/lib/environment.d/30-windows.conf || true
 
 %post -n openSUSEway
 test -e %{_sysconfdir}/greetd/config.toml && \
@@ -234,7 +233,7 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 %config %{_sysconfdir}/sway/env
 %dir %{_sysconfdir}/sway/config.d
 %config %{_sysconfdir}/sway/config.d/50-openSUSE.conf
-%config %{_sysconfdir}/sway/config.d/30-windows.conf
+%config %{_sysconfdir}/sway/config.d/55-openSUSE-windows.conf
 %{_prefix}/lib/systemd/user/sway-session.target
 %{_prefix}/lib/systemd/user/sway.service
 %{_datadir}/wayland-sessions/sway.desktop.brand
