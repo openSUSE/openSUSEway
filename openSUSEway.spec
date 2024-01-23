@@ -188,6 +188,7 @@ echo 'This file marks the pattern openSUSEway to be installed.' >%{buildroot}%{_
 install -D -p -m 644 .config/sway/config %{buildroot}%{_sysconfdir}/sway/config
 install -D -p -m 644 .config/sway/env %{buildroot}%{_sysconfdir}/sway/env
 install -D -p -m 644 .config/sway/config.d/50-openSUSE.conf %{buildroot}%{_sysconfdir}/sway/config.d/50-openSUSE.conf
+install -D -p -m 644 .config/sway/config.d/55-openSUSE-windows.conf %{buildroot}%{_sysconfdir}/sway/config.d/55-openSUSE-windows.conf
 
 install -D -p -m 644 sway/sway-session.target %{buildroot}%{_prefix}/lib/systemd/user/sway-session.target
 install -D -p -m 644 sway/sway.service %{buildroot}%{_prefix}/lib/systemd/user/sway.service
@@ -268,6 +269,7 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 %config %{_sysconfdir}/sway/env
 %dir %{_sysconfdir}/sway/config.d
 %config %{_sysconfdir}/sway/config.d/50-openSUSE.conf
+%config %{_sysconfdir}/sway/config.d/55-openSUSE-windows.conf
 %{_prefix}/lib/systemd/user/sway-session.target
 %{_prefix}/lib/systemd/user/sway.service
 %{_datadir}/wayland-sessions/sway.desktop.brand
