@@ -14,11 +14,11 @@
     "sway/workspaces": {
         "all-outputs": false,
         "disable-scroll": true,
-        "format": " {icon} ",
+        "format": "{index} {icon}",
         "format-icons": {
             "urgent": "",
             "focused": "",
-            "default": ""
+            "default": ""
         }
     },
     "sway/window": {
