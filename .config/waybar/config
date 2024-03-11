@@ -16,8 +16,8 @@
         "disable-scroll": true,
         "format": "{index} {icon}",
         "format-icons": {
-            "urgent": "",
-            "focused": "",
+            "urgent": "",
+            "focused": "",
             "default": ""
         }
     },
