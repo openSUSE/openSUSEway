@@ -71,7 +71,7 @@ Requires:       mpris-ctl
 
 # branding
 Requires:       waybar-branding-openSUSE
-Requires:       sway-biranding-openSUSE
+Requires:       sway-branding-openSUSE
 %ifarch x86_64 %{ix86}
 Requires:       gfxboot-branding-openSUSE
 %endif
