@@ -20,7 +20,7 @@
 %define waybar_version %(rpm -q --queryformat "%%{version}" waybar)
 
 Name:           openSUSEway
-Version:        0.16.0
+Version:        0.16.1
 Release:        0
 Summary:        The openSUSEway desktop environment meta package
 License:        MIT
@@ -71,8 +71,10 @@ Requires:       mpris-ctl
 
 # branding
 Requires:       waybar-branding-openSUSE
-Requires:       sway-branding-openSUSE
+Requires:       sway-biranding-openSUSE
+%ifarch x86_64 %{ix86}
 Requires:       gfxboot-branding-openSUSE
+%endif
 
 # xdg portals and utils
 Requires:       xdg-desktop-portal
