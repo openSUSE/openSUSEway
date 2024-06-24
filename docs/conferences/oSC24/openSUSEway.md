@@ -11,34 +11,29 @@
 
 ## Why
 
-1. tiling
+1. Tiling
    - simple, lightweight, keyboard-centric, good-looking, fun
-
-1. Wayland
+2. Wayland
    - modern, secure, simple
-
-1. Sway
+3. Sway
    - 1 + 2 = 3
+4. openSUSE
 
-1. openSUSE
+Note:
+note
 
 
 ## What
 
-coherent collection of tools and configs
+- coherent collection of tools and configs
+- openSUSE look out of the box
+- simple to override*
 
-openSUSE look out of the box
-
-simple to override*
-
-
-## When
-
-Started in 2020 by Denys
-
-Presented at oSC in 2020, 2021, 2022
-
-Small, growing contributor base ever since
+Note:
+  exec section in the main config:
+   - notification daemon
+   - screen lock
+   - wob
 
 
 ## Who
@@ -47,25 +42,23 @@ Show picture from last year here?
 
 Get consent from everybody
 
+Note:
+  - Started in 2020 by Denys
+  - Presented at oSC in 2020, 2021, 2022
+  - Small, growing contributor base ever since
+
 
 
 ## Features
 
-sway
-
-waybar
-
-wofi
-
-alacritty
-
-swaylock
-
-swaync
-
-wob
-
-greetd
+- sway
+- waybar
+- wofi
+- alacritty
+- swaylock
+- swaync
+- wob
+- greetd
 
 
 ## Sway
@@ -75,33 +68,33 @@ greetd
 
 ## Sway
 
-- openSUSE theme, wallpaper
-- touchpad
+- openSUSE theme
 - lock screen (swaylock)
-- media keys (volume, media, brightness)
-- screenshot menu (grim)
+- multimedia support (keys, touch, audio, etc)
+- screenshots (grim)
 - system mode menu
-- audio / brightness slider (wob)
-- Polkit authentication agent (GNOME)
 - Floating windows
+
+Note:
+  Multimedia: talks about touch, media buttons, audio, bluethoos
 
 
 ## Waybar
 
-- Numbered workspaces, Geeko active
+- Numbered workspaces, Geeko marks active
 - Window title
 - Tray area
-- zypper widget
-- scratchpad widget
-- calendar
-- ...
+- Widgets
+  - zypper
+  - scratchpad
+  - calendar
 
 
 ## Wofi
 
 <img src="oSC24/wofi.png" width="80%">
 
-Open search for replacement
+We are searching for a replacement
 
 
 ## Swaync
@@ -116,52 +109,90 @@ Open search for replacement
 TODO: add screenshots
 
 
-## Live demo?
+## Live demo
+
+Note:
+  - Waybar
+    - Workspaces
+    - Widgets (zypper, bluetooth, calendar, Scratchpad)
+    - notifications
+      - push some with sway
+    - Wob - volume, brithness
+    - Screenshot menu
+    - System menu
 
 
 
 ## Issues
 
-- installation that enables all services
-- SELinux
+installation needs to enable all services
+
+```
+sudo mv /etc/greetd/config.toml /etc/greetd/config.toml.org
+sudo mv /etc/greetd/config.toml.way /etc/greetd/config.toml
+sudo systemctl set-default graphical.target
+sudo systemctl enable greetd
+```
+
+
+## Hardcodes
+
 - hardcoded paths
 - user configuration management
 
 
+## MicroOS
 
-## Similar projects
-
-Greybeard
-
-Moldavite
-
-Slow / no movement in this space
+  - SELinux
+  - transactions
 
 
+## Other projects
 
-## Going forward
+  - Greybeard
+  - Moldavite
 
-- Install enabling greetd / openSUSEway session
-- Support other login managers?
+
+
+## ARM
+
+- openSUSE supports variaty of ARM platforms
+- ARM is rising
+
+
+## Boot
+
+- gfxboot is not supported
+- packages could be excluded with `%ifarch x86_64 %{ix86}`
+
+
+## Packages
+
+- some packages aren't built/supported
+  - alacritty
+- needs additional config changes
+
+
+
+## Future
+
+- Support other login managers
+- Better installer integration
+- Edit screenshots with Swappy
+- Exponential brightness control
+- Fix issues
+
+Note:
   - Simplify trying out openSUSEway desktop without greetd
-
-- Issues with transactional systems
-- Issues with SELinux
-- Issues with paths
-- Issues with system/user configuration
-  - Switch to full user configuration?
-  - Default user install + overrides
-  - Like oh-my-zsh
-
-
-## Going forward
-
-- Open Github Issues:
-  - Edit screenshots with Swappy
   - Bluetooth
   - YaST
-  - Exponential brightness control
-  - Better installer integration
+
+
+## How
+
+- [GitHub](https://github.com/openSUSE/openSUSEway)
+- [GitHub Project](https://github.com/openSUSE/openSUSEway/projects/1)
+- [X11:Wayland/openSUSEway](https://build.opensuse.org/package/show/X11:Wayland/openSUSEway)
 
 Happy to accept contributions :)
 
