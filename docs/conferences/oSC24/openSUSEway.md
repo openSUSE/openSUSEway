@@ -104,7 +104,7 @@ We are searching for a replacement
 
 ## Greetd
 
-TODO: add screenshots
+<img src="oSC24/greetd.png">
 
 
 ## Live demo
