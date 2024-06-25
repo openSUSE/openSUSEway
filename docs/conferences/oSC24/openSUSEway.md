@@ -38,9 +38,7 @@ Note:
 
 ## Who
 
-Show picture from last year here?
-
-Get consent from everybody
+<img src="oSC24/Team_openSUSEway.jpg" width="80%">
 
 Note:
   - Started in 2020 by Denys
