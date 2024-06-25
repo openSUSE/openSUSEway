@@ -157,8 +157,10 @@ sudo systemctl enable greetd
 - openSUSE supports variaty of ARM platforms
 - ARM is rising
 
-Notes:
-  JeOS image? present for variaty of desktops
+Note:
+  - JeOS image + regular installations (1Gb)
+  - could create pre-built JeOS
+
 
 ## Boot
 
@@ -171,8 +173,12 @@ Notes:
 ## Packages
 
 - some packages aren't built/supported
-  - alacritty
 - needs additional config changes
+
+Note:
+  - alacritty was missing but now there
+  - to minimize instalation we might strip some packages: perl, python...
+  - Mesa-dri-vc4 driver is needed for RPi 4
 
 
 
