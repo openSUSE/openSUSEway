@@ -157,11 +157,15 @@ sudo systemctl enable greetd
 - openSUSE supports variaty of ARM platforms
 - ARM is rising
 
+Notes:
+  JeOS image? present for variaty of desktops
 
 ## Boot
 
 - gfxboot is not supported
-- packages could be excluded with `%ifarch x86_64 %{ix86}`
+- packages could be excluded: 
+  
+  `%ifarch x86_64 %{ix86}`
 
 
 ## Packages
@@ -191,6 +195,8 @@ Note:
 - [GitHub](https://github.com/openSUSE/openSUSEway)
 - [GitHub Project](https://github.com/openSUSE/openSUSEway/projects/1)
 - [X11:Wayland/openSUSEway](https://build.opensuse.org/package/show/X11:Wayland/openSUSEway)
+- [Telegram channel](https://t.me/openSUSEway)
+- [openSUSE wiki Portal](https://en.opensuse.org/Portal:OpenSUSEway)
 
 Happy to accept contributions :)
 
