@@ -71,10 +71,10 @@ Note:
 - multimedia support (keys, touch, audio, etc)
 - screenshots (grim)
 - system mode menu
-- Floating windows
+- floating windows
 
 Note:
-  Multimedia: talks about touch, media buttons, audio, bluethoos
+  Multimedia: talks about touch, media buttons, audio, bluetooth
 
 
 ## Waybar
@@ -112,18 +112,21 @@ We are searching for a replacement
 Note:
   - Waybar
     - Workspaces
-    - Widgets (zypper, bluetooth, calendar, Scratchpad)
+    - Widgets (zypper, bluetooth, calendar, scratchpad)
     - notifications
       - push some with sway
-    - Wob - volume, brithness
+    - Wob - volume, brightness
     - Screenshot menu
     - System menu
 
 
 
-## Issues
+# Issues
 
-installation needs to enable all services
+
+## Installation
+
+Needs to enable all services
 
 ```
 sudo mv /etc/greetd/config.toml /etc/greetd/config.toml.org
@@ -131,6 +134,9 @@ sudo mv /etc/greetd/config.toml.way /etc/greetd/config.toml
 sudo systemctl set-default graphical.target
 sudo systemctl enable greetd
 ```
+
+Note:
+greetd-branding package?
 
 
 ## Hardcodes
@@ -145,7 +151,7 @@ sudo systemctl enable greetd
   - transactions
 
 
-## Other projects
+### Other projects
 
   - Greybeard
   - Moldavite
@@ -154,7 +160,7 @@ sudo systemctl enable greetd
 
 ## ARM
 
-- openSUSE supports variaty of ARM platforms
+- openSUSE supports variety of ARM platforms
 - ARM is rising
 
 Note:
@@ -165,8 +171,8 @@ Note:
 ## Boot
 
 - gfxboot is not supported
-- packages could be excluded: 
-  
+- packages could be excluded:
+
   `%ifarch x86_64 %{ix86}`
 
 
@@ -177,7 +183,7 @@ Note:
 
 Note:
   - alacritty was missing but now there
-  - to minimize instalation we might strip some packages: perl, python...
+  - to minimize installation we might strip some packages: perl, python...
   - Mesa-dri-vc4 driver is needed for RPi 4
 
 
