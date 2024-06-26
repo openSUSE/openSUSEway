@@ -19,9 +19,6 @@
    - 1 + 2 = 3
 4. openSUSE
 
-Note:
-note
-
 
 ## What
 
@@ -41,6 +38,8 @@ Note:
 <img src="oSC24/Team_openSUSEway.jpg" width="80%">
 
 Note:
+  General:
+
   - Started in 2020 by Denys
   - Presented at oSC in 2020, 2021, 2022
   - Small, growing contributor base ever since
@@ -49,14 +48,28 @@ Note:
 
 ## Features
 
-- sway
-- waybar
-- wofi
-- alacritty
-- swaylock
-- swaync
-- wob
-- greetd
+<table>
+  <tbody>
+    <tr border-style:none>
+      <td align="center"><ul>
+          <li>sway</li>
+          <li>waybar</li>
+          <li>wofi</li>
+          <li>alacritty</li>
+        </ul>
+      </td>
+      <td>
+      &emsp;&emsp;&emsp;&emsp;
+      </td>
+      <td align="center"><ul>
+          <li>swaylock</li>
+          <li>swaync</li>
+          <li>wob</li>
+          <li>greetd</li>
+        </ul></td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## Sway
@@ -74,7 +87,12 @@ Note:
 - floating windows
 
 Note:
-  Multimedia: talks about touch, media buttons, audio, bluetooth
+  Multimedia: talk about:
+
+  - touch
+  - media buttons
+  - audio
+  - bluetooth
 
 
 ## Waybar
@@ -110,14 +128,17 @@ We are searching for a replacement
 ## Live demo
 
 Note:
+
+  Features to show:
+
   - Waybar
     - Workspaces
     - Widgets (zypper, bluetooth, calendar, scratchpad)
-    - notifications
-      - push some with sway
-    - Wob - volume, brightness
-    - Screenshot menu
-    - System menu
+  - notifications
+    - push some with sway
+  - Wob - volume, brightness
+  - Screenshot menu
+  - System menu
 
 
 
@@ -164,7 +185,9 @@ greetd-branding package?
 - ARM is rising
 
 Note:
-  - JeOS image + regular installations (1Gb)
+  JeOS
+
+  - JeOS image + regular installations (1Gb xz, 3.9GB)
   - could create pre-built JeOS
 
 
@@ -182,6 +205,8 @@ Note:
 - needs additional config changes
 
 Note:
+  Possible issues:
+
   - alacritty was missing but now there
   - to minimize installation we might strip some packages: perl, python...
   - Mesa-dri-vc4 driver is needed for RPi 4
@@ -197,6 +222,8 @@ Note:
 - Fix issues
 
 Note:
+  Other:
+
   - Simplify trying out openSUSEway desktop without greetd
   - Bluetooth
   - YaST
