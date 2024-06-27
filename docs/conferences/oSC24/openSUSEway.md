@@ -19,6 +19,9 @@
    - 1 + 2 = 3
 4. openSUSE
 
+Note:
+  Filippo
+
 
 ## What
 
@@ -27,10 +30,7 @@
 - simple to override*
 
 Note:
-  exec section in the main config:
-   - notification daemon
-   - screen lock
-   - wob
+  Filippo + Denys: We intentionaly keep it simple, to start. It is quite mature.
 
 
 ## Who
@@ -38,7 +38,7 @@ Note:
 <img src="oSC24/Team_openSUSEway.jpg" width="80%">
 
 Note:
-  General:
+  Denys:
 
   - Started in 2020 by Denys
   - Presented at oSC in 2020, 2021, 2022
@@ -71,10 +71,16 @@ Note:
   </tbody>
 </table>
 
+Note:
+  Filippo: We got here over the years, and most of them were contributed by commnity. We are open to improve, replace and bring new tools.
+
 
 ## Sway
 
 <img src="oSC24/sway.png">
+
+Note:
+  Filippo
 
 
 ## Sway
@@ -87,7 +93,7 @@ Note:
 - floating windows
 
 Note:
-  Multimedia: talk about:
+  Filippo talk about:
 
   - touch
   - media buttons
@@ -105,12 +111,18 @@ Note:
   - scratchpad
   - calendar
 
+Note:
+  Denys
+
 
 ## Wofi
 
 <img src="oSC24/wofi.png" width="80%">
 
 We are searching for a replacement
+
+Note:
+  Denys
 
 
 ## Swaync
@@ -119,10 +131,16 @@ We are searching for a replacement
 
 <img src="oSC24/swaync1.png" width="37%">
 
+Note:
+  Filippo
+
 
 ## Greetd
 
 <img src="oSC24/greetd.png">
+
+Note:
+  Filippo
 
 
 ## Live demo
@@ -157,7 +175,7 @@ sudo systemctl enable greetd
 ```
 
 Note:
-greetd-branding package?
+  Filippo, greetd-branding might be needed
 
 
 ## Hardcodes
@@ -165,17 +183,26 @@ greetd-branding package?
 - hardcoded paths
 - user configuration management
 
+Note:
+  Filippo
+
 
 ## MicroOS
 
   - SELinux
   - transactions
 
+Note:
+  Filippo
+
 
 ### Other projects
 
   - Greybeard
   - Moldavite
+
+Note:
+  Filippo
 
 
 
@@ -185,7 +212,7 @@ greetd-branding package?
 - ARM is rising
 
 Note:
-  JeOS
+  Denys
 
   - JeOS image + regular installations (1Gb xz, 3.9GB)
   - could create pre-built JeOS
@@ -198,6 +225,9 @@ Note:
 
   `%ifarch x86_64 %{ix86}`
 
+Note:
+  Denys
+
 
 ## Packages
 
@@ -205,7 +235,7 @@ Note:
 - needs additional config changes
 
 Note:
-  Possible issues:
+  Denys, Possible issues:
 
   - alacritty was missing but now there
   - to minimize installation we might strip some packages: perl, python...
@@ -219,10 +249,9 @@ Note:
 - Better installer integration
 - Edit screenshots with Swappy
 - Exponential brightness control
-- Fix issues
 
 Note:
-  Other:
+  Filippo:
 
   - Simplify trying out openSUSEway desktop without greetd
   - Bluetooth
@@ -231,13 +260,31 @@ Note:
 
 ## How
 
-- [GitHub](https://github.com/openSUSE/openSUSEway)
-- [GitHub Project](https://github.com/openSUSE/openSUSEway/projects/1)
-- [X11:Wayland/openSUSEway](https://build.opensuse.org/package/show/X11:Wayland/openSUSEway)
-- [Telegram channel](https://t.me/openSUSEway)
-- [openSUSE wiki Portal](https://en.opensuse.org/Portal:OpenSUSEway)
+<table>
+  <tbody>
+    <tr border-style:none>
+      <td align="center"><ul>
+          <li><a href="https://github.com/openSUSE/openSUSEway">GitHub</a></li>
+          <li><a href="https://github.com/openSUSE/openSUSEway/projects/1">GitHub Project</a></li>
+          <li><a href="https://build.opensuse.org/package/show/X11:Wayland/openSUSEway">X11:Wayland/openSUSEway</a></li>
+          <li><a href="https://t.me/openSUSEway">Telegram channel</a></li>
+          <li><a href="https://en.opensuse.org/Portal:OpenSUSEway">openSUSE wiki Portal</a></li>
+        </ul>
+      </td>
+      <td>
+      &emsp;&emsp;&emsp;&emsp;
+      </td>
+      <td align="center">
+        <img src="oSC24/qrcode.png">
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 Happy to accept contributions :)
+
+Note:
+  Denys
 
 
 
