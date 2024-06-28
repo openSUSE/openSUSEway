@@ -35,7 +35,7 @@ Note:
 
 ## Who
 
-<img src="oSC24/Team_openSUSEway.jpg" width="80%">
+<img src="Team_openSUSEway.jpg" width="80%">
 
 Note:
   Denys:
@@ -77,7 +77,7 @@ Note:
 
 ## Sway
 
-<img src="oSC24/sway.png">
+<img src="sway.png">
 
 Note:
   Filippo
@@ -117,7 +117,7 @@ Note:
 
 ## Wofi
 
-<img src="oSC24/wofi.png" width="80%">
+<img src="wofi.png" width="80%">
 
 We are searching for a replacement
 
@@ -127,9 +127,9 @@ Note:
 
 ## Swaync
 
-<img src="oSC24/swaync.png" width="30%">
+<img src="swaync.png" width="30%">
 
-<img src="oSC24/swaync1.png" width="37%">
+<img src="swaync1.png" width="37%">
 
 Note:
   Filippo
@@ -137,7 +137,7 @@ Note:
 
 ## Greetd
 
-<img src="oSC24/greetd.png">
+<img src="greetd.png">
 
 Note:
   Filippo
@@ -275,7 +275,7 @@ Note:
       &emsp;&emsp;&emsp;&emsp;
       </td>
       <td align="center">
-        <img src="oSC24/qrcode.png">
+        <img src="qrcode.png">
       </td>
     </tr>
   </tbody>
