@@ -3,6 +3,7 @@ window {
 	background-size: cover;
 	background-position: center;
 	color: rgba(53, 185, 171, 1);
+	box-shadow: inset 0 0 0 8000px rgba(1, 1, 1, 0.4);
 }
 entry {
 	color: rgba(115, 186, 37, 1);
