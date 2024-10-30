@@ -20,7 +20,7 @@
 %define waybar_version %(rpm -q --queryformat "%%{version}" waybar)
 
 Name:           openSUSEway
-Version:        0.16.4
+Version:        0.16.5
 Release:        0
 Summary:        The openSUSEway desktop environment meta package
 License:        MIT
