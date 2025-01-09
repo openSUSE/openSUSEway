@@ -159,6 +159,8 @@ BuildRequires:  waybar
 Provides:       waybar-branding = %{version}
 Conflicts:      waybar-branding
 Supplements:    (waybar and branding-openSUSE)
+Requires:       adobe-sourcesanspro-fonts
+Requires:	fontawesome-fonts
 
 #BRAND: /etc/xdg/waybar/config and /etc/xdg/waybar/style.css
 #BRAND: contain openSUSE config and branding
