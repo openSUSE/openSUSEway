@@ -35,7 +35,6 @@ BuildRequires:  pkgconfig(systemd)
 # system
 Requires:       wget
 Requires:       glibc-locale
-Requires:       bash-completion
 Requires:       NetworkManager
 Requires:       aaa_base
 Requires:       bzip2
