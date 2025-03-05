@@ -1,0 +1,6 @@
+# No check section required
+addFilter("no-%check-section")
+# This is just how it's called
+addFilter("name-repeated-in-summary openSUSEway")
+# Ignore error that causes other errors such as bsc#1205950
+addFilter("branding-requires-unversioned adwaita-icon-theme")
