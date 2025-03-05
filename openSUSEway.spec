@@ -161,7 +161,7 @@ Supplements:    (waybar and branding-openSUSE)
 Requires:       adobe-sourcesanspro-fonts
 Requires:	fontawesome-fonts
 
-#BRAND: /etc/xdg/waybar/config and /etc/xdg/waybar/style.css
+#BRAND: /etc/xdg/waybar/config.jsonc and /etc/xdg/waybar/style.css
 #BRAND: contain openSUSE config and branding
 
 %description -n waybar-branding-openSUSE
@@ -209,7 +209,7 @@ install -D -p -m 644 .config/wofi/style.css %{buildroot}%{_sysconfdir}/wofi/styl
 sed -i -e "s|wofi --show.*|wofi --conf=%{_sysconfdir}/wofi/config --style=%{_sysconfdir}/wofi/style.css|g" %{buildroot}%{_sysconfdir}/sway/config.d/50-openSUSE.conf
 
 ## waybar
-install -D -p -m 644 .config/waybar/config %{buildroot}%{_sysconfdir}/xdg/waybar/config
+install -D -p -m 644 .config/waybar/config.jsonc %{buildroot}%{_sysconfdir}/xdg/waybar/config.jsonc
 install -D -p -m 644 .config/waybar/style.css %{buildroot}%{_sysconfdir}/xdg/waybar/style.css
 install -D -p -m 755 .config/waybar/scratchpad-indicator.sh %{buildroot}%{_datadir}/openSUSEway/helpers/scratchpad-indicator.sh
 
@@ -300,7 +300,7 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 
 %files -n waybar-branding-openSUSE
 %dir %{_sysconfdir}/xdg/waybar
-%config(noreplace) %{_sysconfdir}/xdg/waybar/config
+%config(noreplace) %{_sysconfdir}/xdg/waybar/config.jsonc
 %config(noreplace) %{_sysconfdir}/xdg/waybar/style.css
 %{_datadir}/openSUSEway/helpers/scratchpad-indicator.sh
 
