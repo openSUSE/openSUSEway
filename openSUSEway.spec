@@ -1,7 +1,7 @@
 #
 # spec file for package openSUSEway
 #
-# Copyright (c) 2023 SUSE LLC
+# Copyright (c) 2025 SUSE LLC
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -49,7 +49,6 @@ Requires:       sudo
 Requires:       tar
 
 # basic DE
-Requires:       greetd
 Requires:       (gtkgreet or wlgreet)
 Requires:       pipewire
 Requires:       sway-marker
@@ -71,6 +70,7 @@ Requires:       mpris-ctl
 # branding
 Requires:       waybar-branding-openSUSE
 Requires:       sway-branding-openSUSE
+Requires:       greetd-branding-openSUSE
 %ifarch x86_64 %{ix86}
 Requires:       gfxboot-branding-openSUSE
 %endif
@@ -167,6 +167,20 @@ Requires:	fontawesome-fonts
 %description -n waybar-branding-openSUSE
 This package provides the openSUSE look and feel for waybar.
 
+%package -n     greetd-branding-openSUSE
+Summary:        openSUSE branding of greetd
+Group:          System/Management
+BuildRequires:  greetd
+Provides:       greetd-branding = %{version}
+Conflicts:      greetd-branding
+Supplements:    (greetd and branding-openSUSE)
+
+#BRAND: /etc/greetd/config, /etc/greetd/environments, /etc/greetd/sway-config,
+#BRAND: and /etc/greetd/style.css contain openSUSE config and branding
+
+%description -n greetd-branding-openSUSE
+This package provides the openSUSE look and feel for greetd.
+
 %prep
 %autosetup -p1 -n openSUSEway-%{version}
 
@@ -177,11 +191,12 @@ This package provides the openSUSE look and feel for waybar.
 ## openSUSEway package
 ### qt5ct config to configure dark theme
 install -D -p -m 644 qt5ct.conf %{buildroot}%{_sysconfdir}/xdg/qt5ct/qt5ct.conf
-### greetd as a login manager
-install -D -p -m 644 greetd/sway-config %{buildroot}%{_sysconfdir}/greetd/sway-config
-install -D -p -m 644 greetd/config.toml %{buildroot}%{_sysconfdir}/greetd/config.toml.way
-install -D -p -m 644 greetd/environments %{buildroot}%{_sysconfdir}/greetd/environments
-install -D -p -m 644 greetd/style.css %{buildroot}%{_sysconfdir}/greetd/style.css
+
+## greetd
+install -D -p -m 644 greetd/config.toml     %{buildroot}%{_sysconfdir}/greetd/config.toml
+install -D -p -m 644 greetd/environments    %{buildroot}%{_sysconfdir}/greetd/environments
+install -D -p -m 644 greetd/style.css       %{buildroot}%{_sysconfdir}/greetd/style.css
+install -D -p -m 644 greetd/sway-config     %{buildroot}%{_sysconfdir}/greetd/sway-config
 
 ## openSUSEway pattern package
 mkdir -p %{buildroot}/%{_defaultdocdir}/patterns/
@@ -228,15 +243,6 @@ install -D -p -m 644 .config/swaylock/openSUSEway.conf %{buildroot}%{_sysconfdir
 test -e %{_sysconfdir}/profile.d/openSUSEway.sh && rm %{_sysconfdir}/profile.d/openSUSEway.sh || true
 test -e %{_prefix}/lib/environment.d/50-openSUSEway.conf && rm %{_prefix}/lib/environment.d/50-openSUSEway.conf || true
 
-%post -n openSUSEway
-test -e %{_sysconfdir}/greetd/config.toml && \
-    mv -n %{_sysconfdir}/greetd/config.toml %{_sysconfdir}/greetd/config.toml.orig || true
-cp %{_sysconfdir}/greetd/config.toml.way %{_sysconfdir}/greetd/config.toml
-
-%postun -n openSUSEway
-test -e %{_sysconfdir}/greetd/config.toml.orig && \
-    mv %{_sysconfdir}/greetd/config.toml.orig %{_sysconfdir}/greetd/config.toml || true
-
 %pre -n sway-branding-openSUSE
 %service_add_pre sway-session.target sway.service
 
@@ -257,13 +263,15 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 %files
 %dir %{_sysconfdir}/xdg/qt5ct/
 %config(noreplace) %{_sysconfdir}/xdg/qt5ct/qt5ct.conf
-%dir %{_sysconfdir}/greetd/
-%attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/config.toml.way
-%attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/sway-config
-%attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/environments
-%attr(644,greeter,greeter) %config %{_sysconfdir}/greetd/style.css
 %dir %{_datadir}/openSUSEway/
 %dir %{_datadir}/openSUSEway/helpers/
+
+%files -n greetd-branding-openSUSE
+%dir %{_sysconfdir}/greetd/
+%attr(644,greeter,greeter) %config(noreplace) %{_sysconfdir}/greetd/config.toml
+%attr(644,greeter,greeter) %config(noreplace) %{_sysconfdir}/greetd/sway-config
+%attr(644,greeter,greeter) %config(noreplace) %{_sysconfdir}/greetd/environments
+%attr(644,greeter,greeter) %config(noreplace) %{_sysconfdir}/greetd/style.css
 
 %files -n patterns-openSUSEway
 %dir %{_defaultdocdir}/patterns
