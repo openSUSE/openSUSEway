@@ -4,3 +4,5 @@ addFilter("no-%check-section")
 addFilter("name-repeated-in-summary openSUSEway")
 # Ignore error that causes other errors such as bsc#1205950
 addFilter("branding-requires-unversioned adwaita-icon-theme")
+# The whole point of openSUSEway is to aggregate specific branding requires
+addFilter("branding-requires-specific-flavor")
