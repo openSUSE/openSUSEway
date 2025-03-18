@@ -129,7 +129,8 @@
         "format-ethernet": "",
         "format-linked": "",
         "format-disconnected": "⚠",
-        "format-alt": "{ifname} {essid} ({signalStrength}%)"
+        "tooltip-format": "Interface: {ifname}\nAddress: {ipaddr}\nU: {bandwidthUpBytes} D: {bandwidthDownBytes}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ({frequency} GHz)\nInterface: {ifname}\nAddress: {ipaddr}\nU: {bandwidthUpBytes} D: {bandwidthDownBytes}",
     },
     "bluetooth": {
 	"format": "",
