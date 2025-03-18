@@ -131,6 +131,7 @@
         "format-disconnected": "⚠",
         "tooltip-format": "Interface: {ifname}\nAddress: {ipaddr}\nU: {bandwidthUpBytes} D: {bandwidthDownBytes}",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ({frequency} GHz)\nInterface: {ifname}\nAddress: {ipaddr}\nU: {bandwidthUpBytes} D: {bandwidthDownBytes}",
+        "on-click-right": "exec alacritty -e sh -c 'nmtui'"
     },
     "bluetooth": {
 	"format": "",
