@@ -87,11 +87,3 @@ window#waybar.solo {
 #bluetooth.connected {
     color: rgba(115, 186, 37, 1);
 }
-
-#scratchpad.empty {
-    background-color: transparent;
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
