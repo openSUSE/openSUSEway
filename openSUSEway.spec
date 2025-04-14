@@ -227,7 +227,6 @@ sed -i -e "s|wofi --show.*|wofi --conf=%{_sysconfdir}/wofi/config --style=%{_sys
 ## waybar
 install -D -p -m 644 .config/waybar/config.jsonc %{buildroot}%{_sysconfdir}/xdg/waybar/config.jsonc
 install -D -p -m 644 .config/waybar/style.css %{buildroot}%{_sysconfdir}/xdg/waybar/style.css
-install -D -p -m 755 .config/waybar/scratchpad-indicator.sh %{buildroot}%{_datadir}/openSUSEway/helpers/scratchpad-indicator.sh
 
 ## wob
 install -D -p -m 644 .config/wob/wob.ini %{buildroot}%{_sysconfdir}/sway/wob/wob.ini
@@ -311,6 +310,5 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 %dir %{_sysconfdir}/xdg/waybar
 %config(noreplace) %{_sysconfdir}/xdg/waybar/config.jsonc
 %config(noreplace) %{_sysconfdir}/xdg/waybar/style.css
-%{_datadir}/openSUSEway/helpers/scratchpad-indicator.sh
 
 %changelog
