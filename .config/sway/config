@@ -217,4 +217,5 @@ bindsym $mod+r mode "resize"
 #}
 
 include /etc/sway/config.d/*.conf
-include ~/.config/sway/config.d/*
+include ~/.config/sway/config.d/*.conf
+include ~/.config/sway/config.$(hostname)/*.conf
