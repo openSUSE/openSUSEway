@@ -146,7 +146,7 @@
 	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
 	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
 	"on-click": "bluetooth toggle; pkill -SIGRTMIN+8 waybar",
-	"on-click-right": "exec alacritty -e sh -c 'bluetoothctl'"
+	"on-click-right": "exec alacritty -e sh -c 'bluetuith'"
     },
     "pulseaudio": {
         "format": "{icon}",
