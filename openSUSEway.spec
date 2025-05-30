@@ -55,7 +55,7 @@ Requires:       sway-marker
 Recommends:     grim
 Recommends:     slurp
 Recommends:     firefox
-Recommends:     bluez
+Recommends:     bluetuith
 Recommends:     tlp
 Suggests:       mpv
 Suggests:       vifm
