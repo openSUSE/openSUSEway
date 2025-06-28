@@ -4,11 +4,10 @@ dotfiles for Sway on openSUSE
 ## Screenshots
 ![Example screenshot](screenshot.png)
 
-## How to use
-To use this configuration on openSUSE Tumbleweed please install these packages:
-```
-sudo zypper in openSUSEway
-```
+## Installation instructions
+
+To install openSUSEway, please follow the instructions in the Install section of
+the [openSUSEway Portal](https://en.opensuse.org/Portal:OpenSUSEway).
 
 ## More resources
 [openSUSEway Telegram channel](https://t.me/openSUSEway) for support and project
