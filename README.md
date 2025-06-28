@@ -10,10 +10,13 @@ To install openSUSEway, please follow the instructions in the Install section of
 the [openSUSEway Portal](https://en.opensuse.org/Portal:OpenSUSEway).
 
 ## More resources
-[openSUSEway Telegram channel](https://t.me/openSUSEway) for support and project
-discussion.
+Social channels for support and project discussion (bridged together):
 
-[openSUSEway desktop environment](https://en.opensuse.org/Portal:OpenSUSEway) for more details on complete desktop environment for openSUSE.
+- [openSUSEway Telegram channel](https://t.me/openSUSEway)
+
+- [#opensuseway:opensuse.org Matrix channel](https://matrix.to/#/#opensuseway:opensuse.org)
+
+[openSUSEway Portal](https://en.opensuse.org/Portal:OpenSUSEway) for more details on the openSUSEway desktop environment for openSUSE.
 
 [Sway openSUSE wiki page](https://en.opensuse.org/Sway) for more details about Sway on openSUSE.
 
