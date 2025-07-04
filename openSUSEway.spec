@@ -128,7 +128,6 @@ Summary:        openSUSE branding of sway
 Group:          System/GUI/Other
 BuildRequires:  sway
 Requires:       SwayNotificationCenter
-Requires:       bc
 Requires:       brightnessctl
 Requires:       fontawesome-fonts
 Requires:       jq
