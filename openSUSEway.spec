@@ -56,7 +56,6 @@ Recommends:     grim
 Recommends:     slurp
 Recommends:     firefox
 Recommends:     bluetuith
-Recommends:     tlp
 Suggests:       mpv
 Suggests:       vifm
 Suggests:       vim
