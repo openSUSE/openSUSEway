@@ -211,6 +211,10 @@ install -D -p -m 644 sway/sway.service %{buildroot}%{_prefix}/lib/systemd/user/s
 install -D -p -m 644 sway/sway.desktop %{buildroot}%{_datadir}/wayland-sessions/sway.desktop.brand
 install -D -p -m 755 sway/sway-run.sh %{buildroot}%{_bindir}/sway-run.sh
 
+install -D -p -m 755 helpers/swayidle.sh %{buildroot}%{_datadir}/openSUSEway/helpers/swayidle.sh
+install -D -p -m 755 helpers/swaync.sh %{buildroot}%{_datadir}/openSUSEway/helpers/swaync.sh
+install -D -p -m 755 helpers/wob.sh %{buildroot}%{_datadir}/openSUSEway/helpers/wob.sh
+
 ### alacritty
 # so far doesn't have special branding package and it doesn't support system wide config
 install -D -p -m 644 .config/alacritty/alacritty.toml %{buildroot}%{_sysconfdir}/alacritty/alacritty.toml
@@ -285,6 +289,9 @@ test -e %{_datadir}/wayland-sessions/sway.desktop.orig && \
 %{_prefix}/lib/systemd/user/sway.service
 %{_datadir}/wayland-sessions/sway.desktop.brand
 %{_bindir}/sway-run.sh
+%{_datadir}/openSUSEway/helpers/swayidle.sh
+%{_datadir}/openSUSEway/helpers/swaync.sh
+%{_datadir}/openSUSEway/helpers/wob.sh
 
 %dir %{_sysconfdir}/alacritty
 %config(noreplace) %{_sysconfdir}/alacritty/alacritty.toml
