@@ -9,7 +9,8 @@ vt = next
 # `agreety` is the bundled agetty/login-lookalike. You can replace `$SHELL`
 # with whatever you want started, such as `sway`.
 #
-command = "sway --config /etc/greetd/sway-config"
+# Load the vconsole keymap as the default keyboard layout of the greetd session
+command = "env XKB_DEFAULT_LAYOUT=$(grep -Po '(?<=KEYMAP=).*' /etc/vconsole.conf) sway --config /etc/greetd/sway-config"
 
 # The user to run the command as. The privileges this user must have depends
 # on the greeter. A graphical greeter may for example require the user to be
