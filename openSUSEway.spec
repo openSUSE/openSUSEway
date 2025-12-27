@@ -51,7 +51,6 @@ Requires:       tar
 # basic DE
 Requires:       (gtkgreet or wlgreet)
 Requires:       pipewire
-Requires:       sway-marker
 Recommends:     grim
 Recommends:     slurp
 Recommends:     firefox
@@ -61,10 +60,8 @@ Suggests:       vifm
 Suggests:       vim
 Suggests:       imv
 
-# basic multi-media
-Requires:       clipman
+# Clipboard utils
 Requires:       wl-clipboard
-Requires:       mpris-ctl
 
 # branding
 Requires:       waybar-branding-openSUSE
